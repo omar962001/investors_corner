@@ -1,0 +1,283 @@
+
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --seciton-color:#eff7fa
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.main-btn {
+    background-color:var(--red-color)  ;
+    color: var(--yellow-color);
+    padding: 0.5rem 1rem;
+
+}
+.main-title::after{
+    content: '';
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    position:absolute;
+    bottom: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+/* Start navbar */
+.navbar {
+    background-color: #051736;
+}
+.navbar .navbar-nav .nav-link {
+    color: white;
+    transition: 0.3s;
+    position: relative;
+}
+.navbar .navbar-nav .nav-link:hover::before{
+    left: 10px;
+    transition: 0.3s;
+}
+.navbar .navbar-nav .nav-link.active ,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+    color: var(--green-color) ;
+}
+.navbar .search {
+    border-left: 1px solid var(--green-color);
+}
+.navbar .search svg
+ {
+    color: var(--dark-color);
+}
+.navbar-toggler{
+    color: white;
+    font-size: 25px;
+    border-color: white;
+} 
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+.navbar-toggler[aria-expanded="true"] {
+    border-color: var(--green-color);
+}
+/* End navbar */
+/* Start landing */
+.landing {
+    background-color: #00112c;
+    min-height: calc(100vh - 72px);
+} 
+.landing .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.landing .crypto-images img{
+    width: 1000px;
+    max-width: 100%;
+    position: relative;
+    animation: moving 5s linear infinite;
+}
+.landing .text {
+    position: absolute;
+    left: 0;
+    top: 60%;
+    transform: translateY(-50%);
+    padding: 50px;
+   
+}
+.landing .text h2 {
+    font-size: 60px;
+    font-family: system-ui;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+.landing .text p {
+    font-size: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+.images {
+    display: flex;
+    align-items: center;
+    padding-top: 25px;
+    gap: 10px;
+}
+.images span {
+    font-size: 20px;
+}
+.images img {
+    width: 100px;
+}
+.color-twitter {
+    color: #19283f;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 15px;
+}
+/* End landing */
+/* Start stuff */
+.stuff {
+    background-color: #00112c;
+}
+
+/* End stuff */
+/* Start amas */
+.amas {
+    background-color: #00112c;
+    padding-bottom: 150px;
+}
+.amas .info {
+    height: 250px;
+    background-color: #ffffff10;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-shadow: 2px 2px 5px blue;
+}
+.amas .info h2 {
+    font-size: 30px;
+}
+.stuff .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* end amas */
+
+/* to trining */
+.txt {
+    position: absolute;
+    top: 1300px;
+    left: -155px;
+    background-color: #0d6efd78;
+    height: 300px;
+    width: 300px;
+    filter: blur(125px);
+    
+}
+@keyframes moving {
+    0%, 100% {
+        top: 0;
+    }
+    50% {
+        top: -50px;
+    }
+}
+
+@media (max-width:991px) {
+    .landing .crypto-images img  {
+        display: none; 
+    } 
+    .landing .text  {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        }
+        .landing .text h2 {
+            font-size: 30px;
+            text-align: center;
+           
+        }
+        .landing .text p {
+            text-align: center;
+            font-size: 15px;
+        }
+}
+
+
+/* Start Comminty */
+.communty  {
+    background-color: #00112c;
+}
+
+.sircle {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(rgb(22, 13, 58) 40%, transparent 41%), conic-gradient(rgb(168, 107, 47) 280deg, rgb(168, 107, 47) 35%, rgb(68, 54, 168) 35%, rgb(68, 54, 168) 60%, rgb(105, 84, 188) 60%, rgb(105, 84, 188) 100%);
+    border-radius: 50%;
+    
+}
+.tweet-live {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.stuff p {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #ddd;
+
+}
+
+.box {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #160d3a;
+    padding: 10px;
+    border-radius: 15px;
+    gap: 30px;
+    width: fit-content;
+}
+.box .cards h2 {
+    display: block;
+    font-family: fantasy;
+    font-size: 40px;
+    text-align: center;
+}
+.box .cards span {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+}
+.box .cards span.one{
+    color: rgb(246, 156, 66);
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.box .cards span.two {
+    color: rgb(101, 86, 215);
+    font-size: 25px;
+    font-weight: bold;
+}
+.box .cards span.three {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+.click-join {
+    background: linear-gradient(135deg, #103c7c 0%, #573e93 72.53%, #3732A8 100%);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+}
+@media (max-width:991px) {
+    .stuff .sircle {
+       display: none;
+    }
+}
+
+/* End comminty */
+
+
+
+
